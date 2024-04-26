@@ -1,0 +1,4 @@
+﻿Assembly: Nzr.Diagnostics.OperationTagGenerator.Tests
+File: OperationTagGeneratorTests.cs
+Member: NewTag_ShouldGenerateValidOperationTag
+Line: 34

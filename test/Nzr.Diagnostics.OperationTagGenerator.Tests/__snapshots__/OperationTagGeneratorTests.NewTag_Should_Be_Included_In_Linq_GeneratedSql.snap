@@ -1,0 +1,8 @@
+﻿-- Assembly: Nzr.Diagnostics.OperationTagGenerator.Tests
+-- File: OperationTagGeneratorTests.cs
+-- Member: NewTag_Should_Be_Included_In_Linq_GeneratedSql
+-- Line: 52
+
+SELECT "p"."Id", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+WHERE ef_compare("p"."Price", '10.0') > 0

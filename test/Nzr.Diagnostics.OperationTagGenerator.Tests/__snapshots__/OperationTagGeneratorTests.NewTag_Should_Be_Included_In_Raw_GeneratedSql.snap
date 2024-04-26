@@ -1,0 +1,6 @@
+﻿-- Assembly: Nzr.Diagnostics.OperationTagGenerator.Tests
+-- File: OperationTagGeneratorTests.cs
+-- Member: NewTag_Should_Be_Included_In_Raw_GeneratedSql
+-- Line: 72
+
+SELECT * FROM Products WHERE Price > 10
