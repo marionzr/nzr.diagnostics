@@ -1,0 +1,15 @@
+﻿{
+  "Data": {
+    "MinWorkerThreads": 1,
+    "MinIoThreads": 1,
+    "MaxWorkerThreads": 2,
+    "MaxIoThreads": 2,
+    "AvailableWorkerThreads": 0,
+    "AvailableIoThreads": 2,
+    "ActiveWorkerThreads": 2,
+    "ActiveIoThreads": 0
+  },
+  "Description": "Thread Pool Starvation Detected: Min Worker Threads: 1, Min I/O Threads: 1, Max Worker Threads: 2, Max I/O Threads: 2, Available Worker Threads: 0, Available I/O Threads: 2, Active Worker Threads: 2, Active I/O Threads: 0",
+  "Exception": null,
+  "Status": "Unhealthy"
+}
