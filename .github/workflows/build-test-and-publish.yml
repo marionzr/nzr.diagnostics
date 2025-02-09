@@ -62,7 +62,7 @@ jobs:
         uses: anothrNick/github-tag-action@1.71.0  # GitHub action to auto-generate a version tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token to authenticate with GitHub
-          INITIAL_VERSION: 0.0.0  # Starting version
+          INITIAL_VERSION: 0.0.1  # Starting version
           DEFAULT_BUMP: none  # The increment version disabled. User commit tags (#major, #minor, #patch) to trigger the tag version
 
     # Output the new tag version for the next job
