@@ -6,7 +6,35 @@
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Title>Nzr.Diagnostics.OperationTagGenerator</Title>
+    <Copyright>Copyright https://github.com/marionzr</Copyright>
+    <RepositoryUrl>https://github.com/marionzr/nzr.diagnostics</RepositoryUrl>
+    <Version>1.0.0.0</Version>
+    <Company>marionzr</Company>
+    <Authors>marionzr</Authors>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>nzr.png</PackageIcon>
+    <PackageIconUrl>https://github.com/marionzr/nzr.diagnostics/raw/main/src/nzr.diagnostics/asserts/nzr.ico</PackageIconUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\assets\nzr.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </Content>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 
   <ItemGroup>
     <!-- Analyzers  -->

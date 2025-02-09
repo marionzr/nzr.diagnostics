@@ -1,7 +1,7 @@
 # Nzr.Diagnostics
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/marionzr/nzr.diagnostics)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/marionzr/nzr.diagnostics/ci.yaml)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/marionzr/nzr.diagnostics/build-test-and-publish.yml)
 ![GitHub License](https://img.shields.io/github/license/marionzr/nzr.diagnostics)
 
 Nzr.Diagnostics is a collection of diagnostic utilities and tools, structured as multiple inner projects distributed as NuGet packages. These tools are designed to help with diagnostics, logging, and debugging in your .NET applications.

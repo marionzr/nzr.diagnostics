@@ -3,7 +3,7 @@
 ![NuGet Version](https://img.shields.io/nuget/v/Nzr.Diagnostics.OperationTagGenerator)
 ![NuGet Downloads](https://img.shields.io/nuget/dt/Nzr.Diagnostics.OperationTagGenerator)
 ![GitHub last commit](https://img.shields.io/github/last-commit/marionzr/nzr.diagnostics)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/marionzr/nzr.diagnostics/ci.yaml)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/marionzr/nzr.diagnostics/build-test-and-publish.yml)
 ![GitHub License](https://img.shields.io/github/license/marionzr/nzr.diagnostics)
 
 `OperationTagGenerator` is a simple utility for generating operation tags that help with 

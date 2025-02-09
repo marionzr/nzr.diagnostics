@@ -1,0 +1,109 @@
+name: Build, Test and Publish
+
+# This GitHub Actions workflow automates the process of building and testing the solution.
+# It ensures that every push or pull request targeting the 'main' branch meets build and test quality standards.
+# The workflow reduces manual effort, increases reliability, and provides faster feedback to developers during the CI process.
+
+on: # Triggers
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0'
+
+    - name: Cache NuGet packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.fsproj', '**/global.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-
+
+    - name: Restore dependencies
+      run: dotnet restore || exit 1
+
+    - name: Build solution
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Run tests
+      run: dotnet test --no-build --configuration Release
+
+  # Job to handle version tagging
+  tag-version:
+    runs-on: ubuntu-latest
+    needs: build-and-test  # Depends on the 'build-and-test' job
+    permissions:
+      contents: write  # Permission to write tag to the repo
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Tag Version
+        id: tag_version
+        uses: anothrNick/github-tag-action@1.71.0  # GitHub action to auto-generate a version tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token to authenticate with GitHub
+          INITIAL_VERSION: 0.0.0  # Starting version
+          DEFAULT_BUMP: none  # The increment version disabled. User commit tags (#major, #minor, #patch) to trigger the tag version
+
+    # Output the new tag version for the next job
+    outputs:
+      new_tag: ${{ steps.tag_version.outputs.new_tag }}
+      old_tag: ${{ steps.tag_version.outputs.old_tag }}
+
+  # Job to package and publish the NuGet package
+  package-and-publish:
+    if: ${{ needs.tag-version.outputs.new_tag != '' && needs.tag-version.outputs.new_tag != needs.tag-version.outputs.old_tag }}
+    runs-on: ubuntu-latest
+    needs: tag-version  # Depends on the 'tag-version' job
+
+    steps:
+      - uses: actions/checkout@v2  # Checkout the repository code again
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1  # Setup .NET SDK
+        with:
+          dotnet-version: 8.0.x  # Use .NET 8 SDK
+
+      # Project 1
+      - name: Restore Dependencies
+        run: dotnet restore src/Nzr.Diagnostics.OperationTagGenerator/
+
+      - name: Build Project
+        run: dotnet build src/Nzr.Diagnostics.OperationTagGenerator/ --configuration Release
+
+      - name: Generate NuGet Package
+        run: |
+          # Run the 'dotnet pack' command to create a NuGet package
+          dotnet pack src/Nzr.Diagnostics.OperationTagGenerator/ --configuration Release \
+          -p:PackageVersion=${{ needs.tag-version.outputs.new_tag }} \
+          -p:RepositoryUrl="https://github.com/marionzr/nzr.diagnostics" \
+          -o packages
+
+      # Project N
+      # ...
+
+      # Publish all together
+      - name: Publish NuGet package
+        run: |
+          # Push the generated NuGet packages to NuGet.org using the API key
+          dotnet nuget push packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY_GITHUB_ACTIONS }} --source https://api.nuget.org/v3/index.json --skip-duplicate
