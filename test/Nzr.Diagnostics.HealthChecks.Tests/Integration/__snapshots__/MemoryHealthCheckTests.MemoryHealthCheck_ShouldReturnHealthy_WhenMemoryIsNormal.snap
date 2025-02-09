@@ -1,0 +1,18 @@
+﻿{
+  "Data": {
+    "AllocatedBytes": 3479424,
+    "WorkingSet": 61460480,
+    "PrivateMemorySize": 18534400,
+    "Gen0Collections": 0,
+    "Gen1Collections": 0,
+    "Gen2Collections": 0,
+    "HeapSize": 0,
+    "CommittedMemory": 0,
+    "FragmentedMemory": 0,
+    "MemoryLoadPercentage": 0.0,
+    "LargeObjectHeapSize": 0
+  },
+  "Description": "Memory usage is within normal range: Allocated: 4MB, Working Set: 59MB",
+  "Exception": null,
+  "Status": "Healthy"
+}

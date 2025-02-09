@@ -20,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nzr.Diagnostics.Testing", "test\Nzr.Diagnostics.Testing\Nzr.Diagnostics.Testing.csproj", "{A9EF7E9A-4D62-4624-86A7-F99DF33A87D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nzr.Diagnostics.HealthChecks", "src\Nzr.Diagnostics.HealthChecks\Nzr.Diagnostics.HealthChecks.csproj", "{933DB3FD-214B-4789-B416-51BE7619734F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nzr.Diagnostics.HealthChecks.Tests", "test\Nzr.Diagnostics.HealthChecks.Tests\Nzr.Diagnostics.HealthChecks.Tests.csproj", "{4099312A-9184-49B2-A1C0-DDC63A88656B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{A9EF7E9A-4D62-4624-86A7-F99DF33A87D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9EF7E9A-4D62-4624-86A7-F99DF33A87D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9EF7E9A-4D62-4624-86A7-F99DF33A87D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{933DB3FD-214B-4789-B416-51BE7619734F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{933DB3FD-214B-4789-B416-51BE7619734F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{933DB3FD-214B-4789-B416-51BE7619734F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{933DB3FD-214B-4789-B416-51BE7619734F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4099312A-9184-49B2-A1C0-DDC63A88656B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4099312A-9184-49B2-A1C0-DDC63A88656B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4099312A-9184-49B2-A1C0-DDC63A88656B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4099312A-9184-49B2-A1C0-DDC63A88656B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +58,7 @@ Global
 		{9893B81C-08E9-4E43-AD78-0979BF769EAF} = {FAE4A8BA-16EC-4EE9-A119-521C40D90DF3}
 		{51A14640-AD7B-468A-A1BD-0378C1E441A7} = {E821F4B6-2612-4F7B-BD92-054F238A8630}
 		{A9EF7E9A-4D62-4624-86A7-F99DF33A87D6} = {E821F4B6-2612-4F7B-BD92-054F238A8630}
+		{933DB3FD-214B-4789-B416-51BE7619734F} = {FAE4A8BA-16EC-4EE9-A119-521C40D90DF3}
+		{4099312A-9184-49B2-A1C0-DDC63A88656B} = {E821F4B6-2612-4F7B-BD92-054F238A8630}
 	EndGlobalSection
 EndGlobal

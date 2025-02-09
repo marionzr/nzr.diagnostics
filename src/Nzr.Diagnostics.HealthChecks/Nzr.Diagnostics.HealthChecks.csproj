@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Title>Nzr.Diagnostics.OperationTagGenerator</Title>
+    <Title>Microsoft.Extensions.Diagnostics.HealthChecks</Title>
     <Copyright>Copyright https://github.com/marionzr</Copyright>
     <RepositoryUrl>https://github.com/marionzr/nzr.diagnostics</RepositoryUrl>
     <Version>1.0.0.0</Version>
@@ -24,6 +24,7 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </Content>
+    <EmbeddedResource Include="nzr.css" />
     <None Include="..\..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -35,13 +36,13 @@
     </None>
   </ItemGroup>
 
-
   <ItemGroup>
     <!-- Analyzers  -->
     <PackageReference Include="IDisposableAnalyzers" Version="4.0.8">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="9.0.1" />
 
     <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.12.19">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -49,6 +50,11 @@
     </PackageReference>
 
     <PackageReference Include="SonarAnalyzer.CSharp" Version="10.6.0.109712">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+
+    <PackageReference Include="FluentAssertions.Analyzers" Version="0.34.1">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
