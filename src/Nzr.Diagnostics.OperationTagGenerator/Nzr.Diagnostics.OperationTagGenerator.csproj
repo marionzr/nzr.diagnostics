@@ -38,23 +38,18 @@
 
   <ItemGroup>
     <!-- Analyzers  -->
-    <PackageReference Include="IDisposableAnalyzers" Version="4.0.7">
-      <IncludeAssets>build;runtime;native;contentfiles;analyzers;buildtransitive</IncludeAssets>
+    <PackageReference Include="IDisposableAnalyzers" Version="4.0.8">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
 
-    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.9.28">
-      <IncludeAssets>build;runtime;native;contentfiles;analyzers;buildtransitive</IncludeAssets>
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.12.19">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
 
-    <PackageReference Include="SonarAnalyzer.CSharp" Version="9.24.0.89429">
-      <IncludeAssets>build;runtime;native;contentfiles;analyzers;buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-
-    <PackageReference Include="FluentAssertions.Analyzers" Version="0.31.0">
-      <IncludeAssets>build;runtime;native;contentfiles;analyzers;buildtransitive</IncludeAssets>
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="10.6.0.109712">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <!-- End of Analyzers -->
