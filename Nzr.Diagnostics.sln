@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nzr.Diagnostics.HealthCheck
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nzr.Diagnostics.HealthChecks.Tests", "test\Nzr.Diagnostics.HealthChecks.Tests\Nzr.Diagnostics.HealthChecks.Tests.csproj", "{4099312A-9184-49B2-A1C0-DDC63A88656B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nzr.Diagnostics.HealthChecks.Demo", "src\Nzr.Diagnostics.HealthChecks.Demo\Nzr.Diagnostics.HealthChecks.Demo.csproj", "{2F4749CE-B5D1-4D47-BDF5-1EF65D3938E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{4099312A-9184-49B2-A1C0-DDC63A88656B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4099312A-9184-49B2-A1C0-DDC63A88656B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4099312A-9184-49B2-A1C0-DDC63A88656B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4749CE-B5D1-4D47-BDF5-1EF65D3938E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4749CE-B5D1-4D47-BDF5-1EF65D3938E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4749CE-B5D1-4D47-BDF5-1EF65D3938E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4749CE-B5D1-4D47-BDF5-1EF65D3938E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +66,6 @@ Global
 		{A9EF7E9A-4D62-4624-86A7-F99DF33A87D6} = {E821F4B6-2612-4F7B-BD92-054F238A8630}
 		{933DB3FD-214B-4789-B416-51BE7619734F} = {FAE4A8BA-16EC-4EE9-A119-521C40D90DF3}
 		{4099312A-9184-49B2-A1C0-DDC63A88656B} = {E821F4B6-2612-4F7B-BD92-054F238A8630}
+		{2F4749CE-B5D1-4D47-BDF5-1EF65D3938E7} = {FAE4A8BA-16EC-4EE9-A119-521C40D90DF3}
 	EndGlobalSection
 EndGlobal

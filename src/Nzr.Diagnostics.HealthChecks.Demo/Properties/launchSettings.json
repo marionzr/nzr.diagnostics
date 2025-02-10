@@ -1,0 +1,43 @@
+{
+  "profiles": {
+    "Healthy-healthz-ui-https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "healthz-ui",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Healthy"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7239;http://localhost:5077"
+    },
+    "Unhealthy-healthz-ui-https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "healthz-ui",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Unhealthy"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7239;http://localhost:5077"
+    },
+    "Degraded-healthz-ui-https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "healthz-ui",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Degraded"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7239;http://localhost:5077"
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:40234",
+      "sslPort": 44364
+    }
+  }
+}

@@ -3,11 +3,13 @@
 ![NuGet Version](https://img.shields.io/nuget/v/Nzr.Diagnostics.HealthChecks)
 ![NuGet Downloads](https://img.shields.io/nuget/dt/Nzr.Diagnostics.HealthChecks)
 ![GitHub last commit](https://img.shields.io/github/last-commit/marionzr/nzr.diagnostics)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/marionzr/nzr.diagnostics/ci.yaml)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/marionzr/nzr.diagnostics/build-test-and-publish.yml)
 ![GitHub License](https://img.shields.io/github/license/marionzr/nzr.diagnostics)
 
 `HealthChecks` is a .NET library designed for integrating memory and certificate expiry health checks into your application, allowing you to monitor the system's health and ensure it meets required thresholds. It integrates with the Microsoft HealthChecks framework and supports both operational and certificate health check monitoring. The library provides configuration and services for health check monitoring through simple integrations.
 [Official documentation](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-8.0)
+
+![Nzr.Diagnostics.HealthChecks.Demo](https://raw.githubusercontent.com/marionzr/nzr.diagnostics/main/assets/demo.gif)
 
 ## Getting Started
 
