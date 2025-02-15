@@ -80,9 +80,9 @@ jobs:
       - uses: actions/checkout@v2  # Checkout the repository code again
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v1  # Setup .NET SDK
+        uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 8.0.x  # Use .NET 8 SDK
+          dotnet-version: 8.0.x
 
       # Project 1
       - name: Restore Dependencies
@@ -95,6 +95,21 @@ jobs:
         run: |
           # Run the 'dotnet pack' command to create a NuGet package
           dotnet pack src/Nzr.Diagnostics.OperationTagGenerator/ --configuration Release \
+          -p:PackageVersion=${{ needs.tag-version.outputs.new_tag }} \
+          -p:RepositoryUrl="https://github.com/marionzr/nzr.diagnostics" \
+          -o packages
+
+      # Project 2
+      - name: Restore Dependencies
+        run: dotnet restore src/Nzr.Diagnostics.HealthChecks/
+
+      - name: Build Project
+        run: dotnet build src/Nzr.Diagnostics.HealthChecks/ --configuration Release
+
+      - name: Generate NuGet Package
+        run: |
+          # Run the 'dotnet pack' command to create a NuGet package
+          dotnet pack src/Nzr.Diagnostics.HealthChecks/ --configuration Release \
           -p:PackageVersion=${{ needs.tag-version.outputs.new_tag }} \
           -p:RepositoryUrl="https://github.com/marionzr/nzr.diagnostics" \
           -o packages
