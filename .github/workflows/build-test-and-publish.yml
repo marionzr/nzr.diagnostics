@@ -18,17 +18,17 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 1
 
     - name: Set up .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0'
+        dotnet-version: 10.0.x
 
     - name: Cache NuGet packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.nuget/packages
         key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.fsproj', '**/global.json') }}
@@ -53,7 +53,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -77,17 +77,16 @@ jobs:
     needs: tag-version  # Depends on the 'tag-version' job
 
     steps:
-      - uses: actions/checkout@v2  # Checkout the repository code again
+      - uses: actions/checkout@v4  # Checkout the repository code again
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 10.0.x
 
       # Project 1
       - name: Restore Dependencies
         run: dotnet restore src/Nzr.Diagnostics.OperationTagGenerator/
-
       - name: Build Project
         run: dotnet build src/Nzr.Diagnostics.OperationTagGenerator/ --configuration Release
 
